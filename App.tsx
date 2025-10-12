@@ -31,7 +31,7 @@ export default function App() {
           <Futbolista nombre={"Casillas"} dorsal={10} puesto={"Portero"} ></Futbolista>
         </View>
         <View style={styles.lista}>
-          <Futbolista nombre={"Casillas"} dorsal={11} puesto={"Portero"} colorFondo={"#a2d6eeff"}></Futbolista>
+          <Futbolista nombre={"Casillas"} dorsal={11} puesto={"Portero"} style={styles.estiloPortero}></Futbolista>
         </View>
       </View>
 
@@ -71,5 +71,11 @@ const styles = StyleSheet.create({
     justifyContent: "space-around",
    
   },
+
+  estiloPortero:{
+
+    backgroundColor:"#a2d6eeff",
+
+  }
 
 })
