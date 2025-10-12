@@ -1,70 +1,10 @@
-<<<<<<< HEAD
-import { StyleSheet, Text, View } from 'react-native'
-import React from 'react'
-
-type Futbolistaprops = {
-
-    nombre:String,
-    dorsal:number,
-    puesto:string,
-    colorFondo?:String
-
-}
-
-export default function Futbolista({nombre,dorsal,puesto,colorFondo=styles.contenedor.backgroundColor}
-    :Futbolistaprops
-) {
-    return (
-        <View style={[styles.contenedor, {backgroundColor:colorFondo}]}>
-
-            <Text style={styles.nombre}>{nombre}</Text>
-            <Text style={styles.dorsal}>{dorsal}</Text>
-            <Text style={styles.puesto}>{puesto}</Text>
-
-        </View>
-    )
-}
-
-const styles = StyleSheet.create({
-
-    contenedor: {
-        alignItems: "center",
-        borderRadius: 5,
-        width: 100,
-        height: 100,
-        backgroundColor: "#d63636ff",
-        borderWidth: 2,
-        borderColor: "#b42c2cff",
-    },
-    contenedorSecundario: {
-        flex: 1,
-        alignItems: "center"
-    },
-    nombre: {
-        fontSize: 18,
-        color: "black"
-    },
-    dorsal: {
-        fontSize: 40,
-        color: "black"
-    },
-    puesto: {
-        fontSize: 12,
-        color: "black"
-    }
-
-
-})
-=======
 import { StyleSheet, Text, View, StyleProp, ViewStyle } from 'react-native'
 import React from 'react'
 
-// 🔹 Paso 14: Creamos un tipo que extienda ViewStyle con un color opcional
 type FutbolistaStyle = ViewStyle & {
   color?: string
 }
 
-// 🔹 Paso 15: Usamos el nuevo tipo en el prop style
 type FutbolistaProps = {
   nombre: string
   dorsal: number
@@ -117,4 +57,3 @@ const styles = StyleSheet.create({
     color: "black",
   },
 })
->>>>>>> IncorporandoStyle
