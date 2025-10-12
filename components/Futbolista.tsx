@@ -1,25 +1,24 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 
-type Futbolistaprops = {
+export default function Futbolista({ nombre, dorsal, puesto, style = {} }) {
+    style = StyleSheet.flatten(style)
 
-    nombre:String,
-    dorsal:number,
-    puesto:string,
-    colorFondo?:String
+    const estiloContenedorAmpliado = {
+        width: style.width ?? styles.contenedor.width,
+        height: style.height ?? styles.contenedor.height,
+        backgroundColor: style.backgroundColor ?? styles.contenedor.backgroundColor,
+    }
 
-}
+    const estiloDorsalAmpliado = {
+        color: style.color ?? styles.dorsal.color,
+    }
 
-export default function Futbolista({nombre,dorsal,puesto,colorFondo=styles.contenedor.backgroundColor}
-    :Futbolistaprops
-) {
     return (
-        <View style={[styles.contenedor, {backgroundColor:colorFondo}]}>
-
+        <View style={[styles.contenedor, estiloContenedorAmpliado]}>
             <Text style={styles.nombre}>{nombre}</Text>
-            <Text style={styles.dorsal}>{dorsal}</Text>
+            <Text style={[styles.dorsal, estiloDorsalAmpliado]}>{dorsal}</Text>
             <Text style={styles.puesto}>{puesto}</Text>
-
         </View>
     )
 }
