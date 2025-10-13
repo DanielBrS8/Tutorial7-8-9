@@ -2,6 +2,7 @@ import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 import { Image } from 'expo-image'
 import Futbolista from './components/Futbolista'
+import FilaFutbolistas from './components/FilaFutbolistas'
 
 export default function App() {
   return (

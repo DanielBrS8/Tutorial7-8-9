@@ -10,10 +10,10 @@ type FutbolistaProps = {
   dorsal: number
   puesto: string
   style?: StyleProp<FutbolistaStyle>
-  onPress?: (() => void) | null
+  onPress?: () => void 
 }
 
-export default function Futbolista({ nombre, dorsal, puesto, style = {}, onPress = null }: FutbolistaProps) {
+export default function Futbolista({ nombre, dorsal, puesto, style = {}, onPress}: FutbolistaProps) {
 
   const plano = StyleSheet.flatten(style)
 
