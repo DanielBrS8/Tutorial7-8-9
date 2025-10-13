@@ -13,76 +13,40 @@ export default function App() {
       />
 
       <View style={styles.campo}>
-
-        <View style={styles.lista}>
-          <Futbolista nombre={"Casillas"} dorsal={1} puesto={"Portero"} ></Futbolista>
-          <Futbolista nombre={"Casillas"} dorsal={2} puesto={"Portero"}></Futbolista>
-          <Futbolista nombre={"Casillas"} dorsal={3} puesto={"Portero"} ></Futbolista>
-          <Futbolista nombre={"Casillas"} dorsal={4} puesto={"Portero"} ></Futbolista>
-        </View>
-        <View style={styles.lista}>
-          <Futbolista nombre={"Casillas"} dorsal={5} puesto={"Portero"} ></Futbolista>
-          <Futbolista nombre={"Casillas"} dorsal={6} puesto={"Portero"} ></Futbolista>
-        </View>
-        <View style={styles.lista}>
-          <Futbolista nombre={"Casillas"} dorsal={7} puesto={"Portero"} ></Futbolista>
-          <Futbolista nombre={"Casillas"} dorsal={8} puesto={"Portero"} ></Futbolista>
-          <Futbolista nombre={"Casillas"} dorsal={9} puesto={"Portero"} ></Futbolista>
-          <Futbolista nombre={"Casillas"} dorsal={10} puesto={"Portero"} ></Futbolista>
-        </View>
-        <View style={styles.lista}>
-<<<<<<< HEAD
-          <Futbolista nombre={"Casillas"} dorsal={11} puesto={"Portero"} colorFondo={"#a2d6eeff"}></Futbolista>
-=======
-          <Futbolista nombre={"Casillas"} dorsal={11} puesto={"Portero"} style={styles.estiloPortero}></Futbolista>
->>>>>>> IncorporandoStyle
-        </View>
+        <FilaFutbolistas listaDorsales={[1]} />
+        <FilaFutbolistas listaDorsales={[15, 3, 5, 11]} />
+        <FilaFutbolistas listaDorsales={[16, 14]} />
+        <FilaFutbolistas listaDorsales={[8, 6, 18]} />
+        <FilaFutbolistas listaDorsales={[7]} />
       </View>
-
-
     </View>
   )
 }
 
 const styles = StyleSheet.create({
-
   contenedor: {
     flex: 1,
   },
 
   logo: {
-
     width: "100%",
     height: 250,
-
   },
 
   campo: {
-
     flex: 1,
-
     backgroundColor: "#468944ff",
     padding: 5,
-    paddingTop:20,
+    paddingTop: 20,
     rowGap: 20,
-    
-
   },
 
   lista: {
-
     flexDirection: "row",
     justifyContent: "space-around",
-   
   },
 
-<<<<<<< HEAD
-=======
-  estiloPortero:{
-
-    backgroundColor:"#a2d6eeff",
-
-  }
-
->>>>>>> IncorporandoStyle
+  estiloPortero: {
+    backgroundColor: "#a2d6eeff",
+  },
 })
